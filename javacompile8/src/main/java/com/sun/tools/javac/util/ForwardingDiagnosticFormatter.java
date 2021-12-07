@@ -101,7 +101,7 @@ public class ForwardingDiagnosticFormatter<D extends Diagnostic<?>, F extends Di
      * A delegated formatter configuration delegates all configurations settings
      * to an underlying configuration object (aka the delegated configuration).
      */
-    public static class ForwardingConfiguration implements Configuration {
+    public static class ForwardingConfiguration implements DiagnosticFormatter.Configuration {
 
         /** The configurationr object to which the forwarding configuration delegates some settings */
         protected Configuration configuration;

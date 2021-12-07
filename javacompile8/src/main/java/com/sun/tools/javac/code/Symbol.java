@@ -255,7 +255,7 @@ public abstract class Symbol extends AnnoConstruct implements Element {
         throw new AssertionError();
     }
 
-    public <R, P> R accept(Visitor<R, P> v, P p) {
+    public <R, P> R accept(Symbol.Visitor<R, P> v, P p) {
         return v.visitSymbol(this, p);
     }
 
@@ -644,7 +644,7 @@ public abstract class Symbol extends AnnoConstruct implements Element {
             return other.accept(v, p);
         }
 
-        public <R, P> R accept(Visitor<R, P> v, P p) {
+        public <R, P> R accept(Symbol.Visitor<R, P> v, P p) {
             return v.visitSymbol(other, p);
         }
 
@@ -724,7 +724,7 @@ public abstract class Symbol extends AnnoConstruct implements Element {
         }
 
         @Override
-        public <R, P> R accept(Visitor<R, P> v, P p) {
+        public <R, P> R accept(Symbol.Visitor<R, P> v, P p) {
             return v.visitTypeSymbol(this, p);
         }
     }
@@ -888,7 +888,7 @@ public abstract class Symbol extends AnnoConstruct implements Element {
             return v.visitPackage(this, p);
         }
 
-        public <R, P> R accept(Visitor<R, P> v, P p) {
+        public <R, P> R accept(Symbol.Visitor<R, P> v, P p) {
             return v.visitPackageSymbol(this, p);
         }
     }
@@ -1137,7 +1137,7 @@ public abstract class Symbol extends AnnoConstruct implements Element {
             return v.visitType(this, p);
         }
 
-        public <R, P> R accept(Visitor<R, P> v, P p) {
+        public <R, P> R accept(Symbol.Visitor<R, P> v, P p) {
             return v.visitClassSymbol(this, p);
         }
     }
@@ -1269,7 +1269,7 @@ public abstract class Symbol extends AnnoConstruct implements Element {
             this.data = data;
         }
 
-        public <R, P> R accept(Visitor<R, P> v, P p) {
+        public <R, P> R accept(Symbol.Visitor<R, P> v, P p) {
             return v.visitVarSymbol(this, p);
         }
     }
@@ -1621,7 +1621,7 @@ public abstract class Symbol extends AnnoConstruct implements Element {
             return v.visitExecutable(this, p);
         }
 
-        public <R, P> R accept(Visitor<R, P> v, P p) {
+        public <R, P> R accept(Symbol.Visitor<R, P> v, P p) {
             return v.visitMethodSymbol(this, p);
         }
 
@@ -1670,7 +1670,7 @@ public abstract class Symbol extends AnnoConstruct implements Element {
             this.opcode = opcode;
         }
 
-        public <R, P> R accept(Visitor<R, P> v, P p) {
+        public <R, P> R accept(Symbol.Visitor<R, P> v, P p) {
             return v.visitOperatorSymbol(this, p);
         }
     }

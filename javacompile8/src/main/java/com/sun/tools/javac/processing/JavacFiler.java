@@ -165,12 +165,12 @@ public class JavacFiler implements Filer, Closeable {
             this.javaFileObject = javaFileObject;
         }
 
-        public Kind getKind() {
+        public JavaFileObject.Kind getKind() {
             return javaFileObject.getKind();
         }
 
         public boolean isNameCompatible(String simpleName,
-                                        Kind kind) {
+                                        JavaFileObject.Kind kind) {
             return javaFileObject.isNameCompatible(simpleName, kind);
         }
 
@@ -214,12 +214,12 @@ public class JavacFiler implements Filer, Closeable {
             this.javaFileObject = javaFileObject;
         }
 
-        public Kind getKind() {
+        public JavaFileObject.Kind getKind() {
             return javaFileObject.getKind();
         }
 
         public boolean isNameCompatible(String simpleName,
-                                        Kind kind) {
+                                        JavaFileObject.Kind kind) {
             return javaFileObject.isNameCompatible(simpleName, kind);
         }
 
@@ -415,7 +415,7 @@ public class JavacFiler implements Filer, Closeable {
         return new FilerOutputJavaFileObject(name, fileObject);
     }
 
-    public FileObject createResource(Location location,
+    public FileObject createResource(JavaFileManager.Location location,
                                      CharSequence pkg,
                                      CharSequence relativeName,
                                      Element... originatingElements) throws IOException {
@@ -436,7 +436,7 @@ public class JavacFiler implements Filer, Closeable {
             return new FilerOutputFileObject(null, fileObject);
     }
 
-    private void locationCheck(Location location) {
+    private void locationCheck(JavaFileManager.Location location) {
         if (location instanceof StandardLocation) {
             StandardLocation stdLoc = (StandardLocation) location;
             if (!stdLoc.isOutputLocation())
@@ -445,7 +445,7 @@ public class JavacFiler implements Filer, Closeable {
         }
     }
 
-    public FileObject getResource(Location location,
+    public FileObject getResource(JavaFileManager.Location location,
                                   CharSequence pkg,
                                   CharSequence relativeName) throws IOException {
         String strPkg = pkg.toString();

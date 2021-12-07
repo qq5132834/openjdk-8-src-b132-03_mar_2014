@@ -629,7 +629,7 @@ public class RichDiagnosticFormatter extends
     public static class RichConfiguration extends ForwardingDiagnosticFormatter.ForwardingConfiguration {
 
         /** set of enabled rich formatter's features */
-        protected EnumSet<RichFormatterFeature> features;
+        protected java.util.EnumSet<RichFormatterFeature> features;
 
         @SuppressWarnings("fallthrough")
         public RichConfiguration(Options options, AbstractDiagnosticFormatter formatter) {

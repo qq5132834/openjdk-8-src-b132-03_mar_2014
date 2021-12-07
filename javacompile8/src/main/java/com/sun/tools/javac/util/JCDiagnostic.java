@@ -50,8 +50,8 @@ public class JCDiagnostic implements Diagnostic<JavaFileObject> {
     /** A factory for creating diagnostic objects. */
     public static class Factory {
         /** The context key for the diagnostic factory. */
-        protected static final Context.Key<Factory> diagnosticFactoryKey =
-            new Context.Key<Factory>();
+        protected static final Context.Key<JCDiagnostic.Factory> diagnosticFactoryKey =
+            new Context.Key<JCDiagnostic.Factory>();
 
         /** Get the Factory instance for this context. */
         public static Factory instance(Context context) {
@@ -544,18 +544,18 @@ public class JCDiagnostic implements Diagnostic<JavaFileObject> {
 
     // Methods for javax.tools.Diagnostic
 
-    public Kind getKind() {
+    public Diagnostic.Kind getKind() {
         switch (type) {
         case NOTE:
-            return Kind.NOTE;
+            return Diagnostic.Kind.NOTE;
         case WARNING:
             return flags.contains(DiagnosticFlag.MANDATORY)
-                    ? Kind.MANDATORY_WARNING
-                    : Kind.WARNING;
+                    ? Diagnostic.Kind.MANDATORY_WARNING
+                    : Diagnostic.Kind.WARNING;
         case ERROR:
-            return Kind.ERROR;
+            return Diagnostic.Kind.ERROR;
         default:
-            return Kind.OTHER;
+            return Diagnostic.Kind.OTHER;
         }
     }
 

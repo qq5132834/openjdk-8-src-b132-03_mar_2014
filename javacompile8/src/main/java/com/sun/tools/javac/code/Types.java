@@ -644,7 +644,7 @@ public class Types {
         csym.members_field = new Scope(csym);
         MethodSymbol instDescSym = new MethodSymbol(descSym.flags(), descSym.name, descType, csym);
         csym.members_field.enter(instDescSym);
-        ClassType ctype = new ClassType(Type.noType, List.<Type>nil(), csym);
+        Type.ClassType ctype = new Type.ClassType(Type.noType, List.<Type>nil(), csym);
         ctype.supertype_field = syms.objectType;
         ctype.interfaces_field = targets;
         csym.type = ctype;
@@ -2487,7 +2487,7 @@ public class Types {
     }
 
     /**
-     * Same as {@link #setBounds(TypeVar,List,Type)}, except that
+     * Same as {@link #setBounds(Type.TypeVar,List,Type)}, except that
      * third parameter is computed directly, as follows: if all
      * all bounds are interface types, the computed supertype is Object,
      * otherwise the supertype is simply left null (in this case, the supertype
@@ -2597,7 +2597,7 @@ public class Types {
     }
 
     public boolean overridesObjectMethod(TypeSymbol origin, Symbol msym) {
-        for (Entry e = syms.objectType.tsym.members().lookup(msym.name); e.scope != null ; e = e.next()) {
+        for (Scope.Entry e = syms.objectType.tsym.members().lookup(msym.name) ; e.scope != null ; e = e.next()) {
             if (msym.overrides(e.sym, origin, Types.this, true)) {
                 return true;
             }
@@ -4396,7 +4396,7 @@ public class Types {
      * type itself) of the operation implemented by this visitor; use
      * Void if a second argument is not needed.
      */
-    public static abstract class DefaultTypeVisitor<R,S> implements Visitor<R,S> {
+    public static abstract class DefaultTypeVisitor<R,S> implements Type.Visitor<R,S> {
         final public R visit(Type t, S s)               { return t.accept(this, s); }
         public R visitClassType(ClassType t, S s)       { return visitType(t, s); }
         public R visitWildcardType(WildcardType t, S s) { return visitType(t, s); }
@@ -4593,7 +4593,7 @@ public class Types {
                     }
                     break;
                 case WILDCARD: {
-                    WildcardType ta = (WildcardType) type;
+                    Type.WildcardType ta = (Type.WildcardType) type;
                     switch (ta.kind) {
                         case SUPER:
                             append('-');
@@ -4617,7 +4617,7 @@ public class Types {
                     append(';');
                     break;
                 case FORALL:
-                    ForAll ft = (ForAll) type;
+                    Type.ForAll ft = (Type.ForAll) type;
                     assembleParamsSig(ft.tvars);
                     assembleSig(ft.qtype);
                     break;
@@ -4667,7 +4667,7 @@ public class Types {
         public void assembleParamsSig(List<Type> typarams) {
             append('<');
             for (List<Type> ts = typarams; ts.nonEmpty(); ts = ts.tail) {
-                TypeVar tvar = (TypeVar) ts.head;
+                Type.TypeVar tvar = (Type.TypeVar) ts.head;
                 append(tvar.tsym.name);
                 List<Type> bounds = types.getBounds(tvar);
                 if ((bounds.head.tsym.flags() & INTERFACE) != 0) {

@@ -642,10 +642,10 @@ public class Resolve {
          * is assumed to be thrown.
          */
         void argumentsAcceptable(Env<AttrContext> env,
-                                 DeferredAttrContext deferredAttrContext,
-                                 List<Type> argtypes,
-                                 List<Type> formals,
-                                 Warner warn);
+                                DeferredAttrContext deferredAttrContext,
+                                List<Type> argtypes,
+                                List<Type> formals,
+                                Warner warn);
 
         /**
          * Retrieve the method check object that will be used during a
@@ -4124,8 +4124,8 @@ public class Resolve {
          */
         interface DiagnosticRewriter {
             JCDiagnostic rewriteDiagnostic(JCDiagnostic.Factory diags,
-                                           DiagnosticPosition preferedPos, DiagnosticSource preferredSource,
-                                           DiagnosticType preferredKind, JCDiagnostic d);
+                    DiagnosticPosition preferedPos, DiagnosticSource preferredSource,
+                    DiagnosticType preferredKind, JCDiagnostic d);
         }
 
         /**

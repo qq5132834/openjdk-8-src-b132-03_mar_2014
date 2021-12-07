@@ -1627,7 +1627,7 @@ public abstract class JCTree implements Tree, Cloneable, DiagnosticPosition {
         public JCTree getBody() {
             return body;
         }
-        public List<? extends VariableTree> getParameters() {
+        public java.util.List<? extends VariableTree> getParameters() {
             return params;
         }
         @Override
@@ -2440,32 +2440,32 @@ public abstract class JCTree implements Tree, Cloneable, DiagnosticPosition {
                                    List<JCTree> defs);
         JCImport Import(JCTree qualid, boolean staticImport);
         JCClassDecl ClassDef(JCModifiers mods,
-                             Name name,
-                             List<JCTypeParameter> typarams,
-                             JCExpression extending,
-                             List<JCExpression> implementing,
-                             List<JCTree> defs);
+                          Name name,
+                          List<JCTypeParameter> typarams,
+                          JCExpression extending,
+                          List<JCExpression> implementing,
+                          List<JCTree> defs);
         JCMethodDecl MethodDef(JCModifiers mods,
-                               Name name,
-                               JCExpression restype,
-                               List<JCTypeParameter> typarams,
-                               JCVariableDecl recvparam,
-                               List<JCVariableDecl> params,
-                               List<JCExpression> thrown,
-                               JCBlock body,
-                               JCExpression defaultValue);
+                            Name name,
+                            JCExpression restype,
+                            List<JCTypeParameter> typarams,
+                            JCVariableDecl recvparam,
+                            List<JCVariableDecl> params,
+                            List<JCExpression> thrown,
+                            JCBlock body,
+                            JCExpression defaultValue);
         JCVariableDecl VarDef(JCModifiers mods,
-                              Name name,
-                              JCExpression vartype,
-                              JCExpression init);
+                      Name name,
+                      JCExpression vartype,
+                      JCExpression init);
         JCSkip Skip();
         JCBlock Block(long flags, List<JCStatement> stats);
         JCDoWhileLoop DoLoop(JCStatement body, JCExpression cond);
         JCWhileLoop WhileLoop(JCExpression cond, JCStatement body);
         JCForLoop ForLoop(List<JCStatement> init,
-                          JCExpression cond,
-                          List<JCExpressionStatement> step,
-                          JCStatement body);
+                        JCExpression cond,
+                        List<JCExpressionStatement> step,
+                        JCStatement body);
         JCEnhancedForLoop ForeachLoop(JCVariableDecl var, JCExpression expr, JCStatement body);
         JCLabeledStatement Labelled(Name label, JCStatement body);
         JCSwitch Switch(JCExpression selector, List<JCCase> cases);
@@ -2478,8 +2478,8 @@ public abstract class JCTree implements Tree, Cloneable, DiagnosticPosition {
                   JCBlock finalizer);
         JCCatch Catch(JCVariableDecl param, JCBlock body);
         JCConditional Conditional(JCExpression cond,
-                                  JCExpression thenpart,
-                                  JCExpression elsepart);
+                                JCExpression thenpart,
+                                JCExpression elsepart);
         JCIf If(JCExpression cond, JCStatement thenpart, JCStatement elsepart);
         JCExpressionStatement Exec(JCExpression expr);
         JCBreak Break(Name label);
@@ -2488,16 +2488,16 @@ public abstract class JCTree implements Tree, Cloneable, DiagnosticPosition {
         JCThrow Throw(JCExpression expr);
         JCAssert Assert(JCExpression cond, JCExpression detail);
         JCMethodInvocation Apply(List<JCExpression> typeargs,
-                                 JCExpression fn,
-                                 List<JCExpression> args);
+                    JCExpression fn,
+                    List<JCExpression> args);
         JCNewClass NewClass(JCExpression encl,
-                            List<JCExpression> typeargs,
-                            JCExpression clazz,
-                            List<JCExpression> args,
-                            JCClassDecl def);
+                          List<JCExpression> typeargs,
+                          JCExpression clazz,
+                          List<JCExpression> args,
+                          JCClassDecl def);
         JCNewArray NewArray(JCExpression elemtype,
-                            List<JCExpression> dims,
-                            List<JCExpression> elems);
+                          List<JCExpression> dims,
+                          List<JCExpression> elems);
         JCParens Parens(JCExpression expr);
         JCAssign Assign(JCExpression lhs, JCExpression rhs);
         JCAssignOp Assignop(Tag opcode, JCTree lhs, JCTree rhs);

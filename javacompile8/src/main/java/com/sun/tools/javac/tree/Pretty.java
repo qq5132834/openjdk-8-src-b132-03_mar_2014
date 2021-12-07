@@ -43,7 +43,7 @@ import static com.sun.tools.javac.tree.JCTree.Tag.*;
  *  This code and its internal interfaces are subject to change or
  *  deletion without notice.</b>
  */
-public class Pretty extends Visitor {
+public class Pretty extends JCTree.Visitor {
 
     public Pretty(Writer out, boolean sourceOutput) {
         this.out = out;
@@ -1021,7 +1021,7 @@ public class Pretty extends Visitor {
         }
     }
 
-    public String operatorName(Tag tag) {
+    public String operatorName(JCTree.Tag tag) {
         switch(tag) {
             case POS:     return "+";
             case NEG:     return "-";

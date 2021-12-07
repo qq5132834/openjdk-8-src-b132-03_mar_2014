@@ -476,9 +476,9 @@ public class Gen extends JCTree.Visitor {
      */
     List<JCTree> normalizeDefs(List<JCTree> defs, ClassSymbol c) {
         ListBuffer<JCStatement> initCode = new ListBuffer<JCStatement>();
-        ListBuffer<TypeCompound> initTAs = new ListBuffer<TypeCompound>();
+        ListBuffer<Attribute.TypeCompound> initTAs = new ListBuffer<Attribute.TypeCompound>();
         ListBuffer<JCStatement> clinitCode = new ListBuffer<JCStatement>();
-        ListBuffer<TypeCompound> clinitTAs = new ListBuffer<TypeCompound>();
+        ListBuffer<Attribute.TypeCompound> clinitTAs = new ListBuffer<Attribute.TypeCompound>();
         ListBuffer<JCTree> methodDefs = new ListBuffer<JCTree>();
         // Sort definitions into three listbuffers:
         //  - initCode for instance initializers
@@ -530,7 +530,7 @@ public class Gen extends JCTree.Visitor {
         if (initCode.length() != 0) {
             List<JCStatement> inits = initCode.toList();
             initTAs.addAll(c.getInitTypeAttributes());
-            List<TypeCompound> initTAlist = initTAs.toList();
+            List<Attribute.TypeCompound> initTAlist = initTAs.toList();
             for (JCTree t : methodDefs) {
                 normalizeMethod((JCMethodDecl)t, inits, initTAlist);
             }
@@ -560,10 +560,10 @@ public class Gen extends JCTree.Visitor {
         return methodDefs.toList();
     }
 
-    private List<TypeCompound> getAndRemoveNonFieldTAs(VarSymbol sym) {
+    private List<Attribute.TypeCompound> getAndRemoveNonFieldTAs(VarSymbol sym) {
         List<TypeCompound> tas = sym.getRawTypeAttributes();
-        ListBuffer<TypeCompound> fieldTAs = new ListBuffer<TypeCompound>();
-        ListBuffer<TypeCompound> nonfieldTAs = new ListBuffer<TypeCompound>();
+        ListBuffer<Attribute.TypeCompound> fieldTAs = new ListBuffer<Attribute.TypeCompound>();
+        ListBuffer<Attribute.TypeCompound> nonfieldTAs = new ListBuffer<Attribute.TypeCompound>();
         for (TypeCompound ta : tas) {
             if (ta.getPosition().type == TargetType.FIELD) {
                 fieldTAs.add(ta);
@@ -1652,7 +1652,7 @@ public class Gen extends JCTree.Visitor {
                                       startpc,  end, code.curCP(),
                                       catchType);
                         if (subCatch.type.isAnnotated()) {
-                            for (TypeCompound tc :
+                            for (Attribute.TypeCompound tc :
                                      subCatch.type.getAnnotationMirrors()) {
                                 tc.position.type_index = catchType;
                             }
@@ -1669,7 +1669,7 @@ public class Gen extends JCTree.Visitor {
                                       startpc, endpc, code.curCP(),
                                       catchType);
                         if (subCatch.type.isAnnotated()) {
-                            for (TypeCompound tc :
+                            for (Attribute.TypeCompound tc :
                                      subCatch.type.getAnnotationMirrors()) {
                                 tc.position.type_index = catchType;
                             }
@@ -1940,7 +1940,7 @@ public class Gen extends JCTree.Visitor {
         boolean initOrClinit = code.meth.getKind() == javax.lang.model.element.ElementKind.CONSTRUCTOR
                 || code.meth.getKind() == javax.lang.model.element.ElementKind.STATIC_INIT;
 
-        for (TypeCompound ta : meth.getRawTypeAttributes()) {
+        for (Attribute.TypeCompound ta : meth.getRawTypeAttributes()) {
             if (ta.hasUnknownPosition())
                 ta.tryFixPosition();
 
@@ -1951,7 +1951,7 @@ public class Gen extends JCTree.Visitor {
         if (!initOrClinit)
             return;
 
-        for (TypeCompound ta : meth.owner.getRawTypeAttributes()) {
+        for (Attribute.TypeCompound ta : meth.owner.getRawTypeAttributes()) {
             if (ta.hasUnknownPosition())
                 ta.tryFixPosition();
 
@@ -1964,7 +1964,7 @@ public class Gen extends JCTree.Visitor {
             if (!s.getKind().isField())
                 continue;
 
-            for (TypeCompound ta : s.getRawTypeAttributes()) {
+            for (Attribute.TypeCompound ta : s.getRawTypeAttributes()) {
                 if (ta.hasUnknownPosition())
                     ta.tryFixPosition();
 

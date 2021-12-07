@@ -577,8 +577,8 @@ public class Check {
             deferredLintHandler.report(new DeferredLintHandler.LintLogger() {
                 @Override
                 public void report() {
-                    if (lint.isEnabled(LintCategory.CAST))
-                        log.warning(LintCategory.CAST,
+                    if (lint.isEnabled(Lint.LintCategory.CAST))
+                        log.warning(Lint.LintCategory.CAST,
                                 tree.pos(), "redundant.cast", tree.expr.type);
                 }
             });
@@ -2759,7 +2759,7 @@ public class Check {
      * @param repeatable the @Repeatable on 's'
      * @param pos where to report errors
      */
-    public void validateRepeatable(TypeSymbol s, Compound repeatable, DiagnosticPosition pos) {
+    public void validateRepeatable(TypeSymbol s, Attribute.Compound repeatable, DiagnosticPosition pos) {
         Assert.check(types.isSameType(repeatable.type, syms.repeatableType));
 
         Type t = null;
@@ -2889,7 +2889,7 @@ public class Check {
             targets.add(names.PARAMETER);
             targets.add(names.TYPE);
 
-            defaultTargets = Collections.unmodifiableSet(targets);
+            defaultTargets = java.util.Collections.unmodifiableSet(targets);
         }
 
         return defaultTargets;
@@ -2954,7 +2954,7 @@ public class Check {
 
     /** Is the annotation applicable to types? */
     protected boolean isTypeAnnotation(JCAnnotation a, boolean isTypeParameter) {
-        Compound atTarget =
+        Attribute.Compound atTarget =
             a.annotationType.type.tsym.attribute(syms.annotationTargetType.tsym);
         if (atTarget == null) {
             // An annotation without @Target is not a type annotation.
@@ -3046,7 +3046,7 @@ public class Check {
 
 
     Attribute.Array getAttributeTargetAttribute(Symbol s) {
-        Compound atTarget =
+        Attribute.Compound atTarget =
             s.attribute(syms.annotationTargetType.tsym);
         if (atTarget == null) return null; // ok, is applicable
         Attribute atValue = atTarget.member(names.value);
@@ -3455,7 +3455,7 @@ public class Check {
     /** Check that an auxiliary class is not accessed from any other file than its own.
      */
     void checkForBadAuxiliaryClassAccess(DiagnosticPosition pos, Env<AttrContext> env, ClassSymbol c) {
-        if (lint.isEnabled(LintCategory.AUXILIARYCLASS) &&
+        if (lint.isEnabled(Lint.LintCategory.AUXILIARYCLASS) &&
             (c.flags() & AUXILIARY) != 0 &&
             rs.isAccessible(env, c) &&
             !fileManager.isSameFile(c.sourcefile, env.toplevel.sourcefile))

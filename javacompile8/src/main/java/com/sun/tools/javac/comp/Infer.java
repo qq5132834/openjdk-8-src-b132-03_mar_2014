@@ -1412,7 +1412,7 @@ public class Infer {
             checkWithinBounds(inferenceContext, warn); //initial propagation of bounds
             InferenceGraph inferenceGraph = new InferenceGraph(stuckDeps);
             while (!sstrategy.done()) {
-                Node nodeToSolve = sstrategy.pickNode(inferenceGraph);
+                InferenceGraph.Node nodeToSolve = sstrategy.pickNode(inferenceGraph);
                 List<Type> varsToSolve = List.from(nodeToSolve.data);
                 List<Type> saved_undet = inferenceContext.save();
                 try {
@@ -1753,8 +1753,8 @@ public class Infer {
         /** list of inference vars in this context */
         List<Type> inferencevars;
 
-        Map<FreeTypeListener, List<Type>> freeTypeListeners =
-                new HashMap<FreeTypeListener, List<Type>>();
+        java.util.Map<FreeTypeListener, List<Type>> freeTypeListeners =
+                new java.util.HashMap<FreeTypeListener, List<Type>>();
 
         List<FreeTypeListener> freetypeListeners = List.nil();
 

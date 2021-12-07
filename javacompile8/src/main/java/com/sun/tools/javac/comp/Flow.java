@@ -777,7 +777,7 @@ public class Flow {
          */
         List<Type> caught;
 
-        class FlowPendingExit extends PendingExit {
+        class FlowPendingExit extends BaseAnalyzer.PendingExit {
 
             Type thrown;
 
@@ -1427,7 +1427,7 @@ public class Flow {
 
         protected Names names;
 
-        public static class AbstractAssignPendingExit extends PendingExit {
+        public static class AbstractAssignPendingExit extends BaseAnalyzer.PendingExit {
 
             final Bits inits;
             final Bits uninits;
@@ -2393,7 +2393,7 @@ public class Flow {
         Lint lint;
 
         public static class AssignPendingExit
-            extends AbstractAssignPendingExit {
+            extends AbstractAssignAnalyzer.AbstractAssignPendingExit {
 
             public AssignPendingExit(JCTree tree, final Bits inits, final Bits uninits) {
                 super(tree, inits, uninits);

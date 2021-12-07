@@ -42,7 +42,7 @@ import com.sun.tools.javac.tree.JCTree.*;
  *  This code and its internal interfaces are subject to change or
  *  deletion without notice.</b>
  */
-public class TreeTranslator extends Visitor {
+public class TreeTranslator extends JCTree.Visitor {
 
     /** Visitor result field: a tree
      */

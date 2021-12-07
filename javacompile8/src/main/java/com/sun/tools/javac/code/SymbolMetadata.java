@@ -428,7 +428,7 @@ public class SymbolMetadata {
         public Placeholder(Annotate.AnnotateRepeatedContext<T> ctx, List<T> placeholderFor, Symbol on) {
             super(on.type, List.<Pair<Symbol.MethodSymbol, Attribute>>nil(),
                     ctx.isTypeCompound ?
-                            ((TypeCompound)placeholderFor.head).position :
+                            ((Attribute.TypeCompound)placeholderFor.head).position :
                                 new TypeAnnotationPosition());
             this.ctx = ctx;
             this.placeholderFor = placeholderFor;

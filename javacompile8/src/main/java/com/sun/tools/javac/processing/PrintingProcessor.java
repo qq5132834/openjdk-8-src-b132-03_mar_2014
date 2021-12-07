@@ -304,7 +304,7 @@ public class PrintingProcessor extends AbstractProcessor {
 
             if (docComment != null) {
                 // Break comment into lines
-                StringTokenizer st = new StringTokenizer(docComment,
+                java.util.StringTokenizer st = new StringTokenizer(docComment,
                                                                   "\n\r");
                 indent();
                 writer.println("/**");

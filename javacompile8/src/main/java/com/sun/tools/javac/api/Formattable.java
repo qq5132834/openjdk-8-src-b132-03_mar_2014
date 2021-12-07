@@ -62,7 +62,7 @@ public interface Formattable {
             this.key = key;
         }
 
-        public String toString(Locale l, Messages messages) {
+        public String toString(java.util.Locale l, Messages messages) {
             return messages.getLocalizedString(l, key);
         }
         public String getKind() {

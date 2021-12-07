@@ -299,7 +299,7 @@ public class JavacProcessingEnvironment implements ProcessingEnvironment, Closea
             handleException(key, e);
         }
 
-        List<Processor> pl = Collections.emptyList();
+        java.util.List<Processor> pl = Collections.emptyList();
         return pl.iterator();
     }
 
@@ -1441,7 +1441,7 @@ public class JavacProcessingEnvironment implements ProcessingEnvironment, Closea
         return messages.getCurrentLocale();
     }
 
-    public Set<PackageSymbol> getSpecifiedPackages() {
+    public Set<Symbol.PackageSymbol> getSpecifiedPackages() {
         return specifiedPackages;
     }
 

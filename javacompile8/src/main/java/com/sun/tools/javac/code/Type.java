@@ -171,7 +171,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
         return this;
     }
 
-    public <R,S> R accept(Visitor<R,S> v, S s) { return v.visitType(this, s); }
+    public <R,S> R accept(Type.Visitor<R,S> v, S s) { return v.visitType(this, s); }
 
     /** Define a type given its tag and type symbol
      */
@@ -481,7 +481,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
     }
 
     public static class JCPrimitiveType extends Type
-            implements PrimitiveType {
+            implements javax.lang.model.type.PrimitiveType {
 
         TypeTag tag;
 
@@ -596,7 +596,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
         public TypeVar bound;
 
         @Override
-        public <R,S> R accept(Visitor<R,S> v, S s) {
+        public <R,S> R accept(Type.Visitor<R,S> v, S s) {
             return v.visitWildcardType(this, s);
         }
 
@@ -759,7 +759,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
         }
 
         @Override
-        public <R,S> R accept(Visitor<R,S> v, S s) {
+        public <R,S> R accept(Type.Visitor<R,S> v, S s) {
             return v.visitClassType(this, s);
         }
 
@@ -1020,7 +1020,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
             return ARRAY;
         }
 
-        public <R,S> R accept(Visitor<R,S> v, S s) {
+        public <R,S> R accept(Type.Visitor<R,S> v, S s) {
             return v.visitArrayType(this, s);
         }
 
@@ -1128,7 +1128,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
             return METHOD;
         }
 
-        public <R,S> R accept(Visitor<R,S> v, S s) {
+        public <R,S> R accept(Type.Visitor<R,S> v, S s) {
             return v.visitMethodType(this, s);
         }
 
@@ -1206,7 +1206,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
         }
 
         @Override
-        public <R,S> R accept(Visitor<R,S> v, S s) {
+        public <R,S> R accept(Type.Visitor<R,S> v, S s) {
             return v.visitPackageType(this, s);
         }
 
@@ -1262,7 +1262,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
         }
 
         @Override
-        public <R,S> R accept(Visitor<R,S> v, S s) {
+        public <R,S> R accept(Type.Visitor<R,S> v, S s) {
             return v.visitTypeVar(this, s);
         }
 
@@ -1325,7 +1325,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
         }
 
         @Override
-        public <R,S> R accept(Visitor<R,S> v, S s) {
+        public <R,S> R accept(Type.Visitor<R,S> v, S s) {
             return v.visitCapturedType(this, s);
         }
 
@@ -1378,7 +1378,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
         }
 
         @Override
-        public <R,S> R accept(Visitor<R,S> v, S s) {
+        public <R,S> R accept(Type.Visitor<R,S> v, S s) {
             return v.visitForAll(this, s);
         }
 
@@ -1466,7 +1466,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
         public UndetVarListener listener = null;
 
         @Override
-        public <R,S> R accept(Visitor<R,S> v, S s) {
+        public <R,S> R accept(Type.Visitor<R,S> v, S s) {
             return v.visitUndetVar(this, s);
         }
 
@@ -1538,7 +1538,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
             notifyChange(EnumSet.of(ib));
         }
         //where
-            Mapping toTypeVarMap = new Mapping("toTypeVarMap") {
+            Type.Mapping toTypeVarMap = new Mapping("toTypeVarMap") {
                 @Override
                 public Type apply(Type t) {
                     if (t.hasTag(UNDETVAR)) {
@@ -1773,7 +1773,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
         }
 
         @Override
-        public <R,S> R accept(Visitor<R,S> v, S s) {
+        public <R,S> R accept(Type.Visitor<R,S> v, S s) {
             return v.visitErrorType(this, s);
         }
 
@@ -1807,9 +1807,9 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
     public static class AnnotatedType extends Type
             implements
                 javax.lang.model.type.ArrayType,
-                DeclaredType,
-                PrimitiveType,
-                TypeVariable,
+                javax.lang.model.type.DeclaredType,
+                javax.lang.model.type.PrimitiveType,
+                javax.lang.model.type.TypeVariable,
                 javax.lang.model.type.WildcardType {
         /** The type annotations on this type.
          */
@@ -1858,7 +1858,7 @@ public abstract class Type extends AnnoConstruct implements TypeMirror {
         }
 
         @Override
-        public <R,S> R accept(Visitor<R,S> v, S s) {
+        public <R,S> R accept(Type.Visitor<R,S> v, S s) {
             return v.visitAnnotatedType(this, s);
         }
 

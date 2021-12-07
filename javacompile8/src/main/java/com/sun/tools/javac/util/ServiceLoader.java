@@ -289,8 +289,8 @@ public final class ServiceLoader<S>
      *
      * <p> To achieve laziness the actual work of parsing the available
      * provider-configuration files and instantiating providers must be done by
-     * the iterator itself.  Its {@link Iterator#hasNext hasNext} and
-     * {@link Iterator#next next} methods can therefore throw a
+     * the iterator itself.  Its {@link java.util.Iterator#hasNext hasNext} and
+     * {@link java.util.Iterator#next next} methods can therefore throw a
      * {@link ServiceConfigurationError} if a provider-configuration file
      * violates the specified format, or if it names a provider class that
      * cannot be found and instantiated, or if the result of instantiating the
@@ -313,7 +313,7 @@ public final class ServiceLoader<S>
      * fail silently.</blockquote>
      *
      * <p> The iterator returned by this method does not support removal.
-     * Invoking its {@link Iterator#remove() remove} method will
+     * Invoking its {@link java.util.Iterator#remove() remove} method will
      * cause an {@link UnsupportedOperationException} to be thrown.
      *
      * @return  An iterator that lazily loads providers for this loader's
@@ -367,7 +367,7 @@ public final class ServiceLoader<S>
 
     /**
      * Creates a new service loader for the given service type, using the
-     * current thread's {@linkplain Thread#getContextClassLoader
+     * current thread's {@linkplain java.lang.Thread#getContextClassLoader
      * context class loader}.
      *
      * <p> An invocation of this convenience method of the form

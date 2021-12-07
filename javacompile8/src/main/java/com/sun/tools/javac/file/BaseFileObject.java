@@ -75,7 +75,7 @@ public abstract class BaseFileObject implements JavaFileObject {
 
     protected abstract String inferBinaryName(Iterable<? extends File> path);
 
-    protected static Kind getKind(String filename) {
+    protected static JavaFileObject.Kind getKind(String filename) {
         return BaseFileManager.getKind(filename);
     }
 

@@ -722,7 +722,7 @@ public class JavaTokenizer {
      * Called when a complete comment has been scanned. pos and endPos
      * will mark the comment boundary.
      */
-    protected Comment processComment(int pos, int endPos, CommentStyle style) {
+    protected Tokens.Comment processComment(int pos, int endPos, CommentStyle style) {
         if (scannerDebug)
             System.out.println("processComment(" + pos
                                + "," + endPos + "," + style + ")=|"

@@ -512,17 +512,17 @@ public class JNIWriter {
                 if (isalnum(ch)) {
                     result.append(ch);
                 } else if ((ch == '.') &&
-                           mtype == Type.CLASS) {
+                           mtype == Mangle.Type.CLASS) {
                     result.append('_');
                 } else if (( ch == '$') &&
-                           mtype == Type.CLASS) {
+                           mtype == Mangle.Type.CLASS) {
                     result.append('_');
                     result.append('_');
-                } else if (ch == '_' && mtype == Type.FIELDSTUB) {
+                } else if (ch == '_' && mtype == Mangle.Type.FIELDSTUB) {
                     result.append('_');
-                } else if (ch == '_' && mtype == Type.CLASS) {
+                } else if (ch == '_' && mtype == Mangle.Type.CLASS) {
                     result.append('_');
-                } else if (mtype == Type.JNI) {
+                } else if (mtype == Mangle.Type.JNI) {
                     String esc = null;
                     if (ch == '_')
                         esc = "_1";
@@ -537,7 +537,7 @@ public class JNIWriter {
                     } else {
                         result.append(mangleChar(ch));
                     }
-                } else if (mtype == Type.SIGNATURE) {
+                } else if (mtype == Mangle.Type.SIGNATURE) {
                     if (isprint(ch)) {
                         result.append(ch);
                     } else {
@@ -556,21 +556,21 @@ public class JNIWriter {
             StringBuilder result = new StringBuilder(100);
             result.append("Java_");
 
-            if (mtype == Type.METHOD_JDK_1) {
-                result.append(mangle(clazz.getQualifiedName(), Type.CLASS));
+            if (mtype == Mangle.Type.METHOD_JDK_1) {
+                result.append(mangle(clazz.getQualifiedName(), Mangle.Type.CLASS));
                 result.append('_');
                 result.append(mangle(method.getSimpleName(),
-                                     Type.FIELD));
+                                     Mangle.Type.FIELD));
                 result.append("_stub");
                 return result.toString();
             }
 
             /* JNI */
-            result.append(mangle(getInnerQualifiedName(clazz), Type.JNI));
+            result.append(mangle(getInnerQualifiedName(clazz), Mangle.Type.JNI));
             result.append('_');
             result.append(mangle(method.getSimpleName(),
-                                 Type.JNI));
-            if (mtype == Type.METHOD_JNI_LONG) {
+                                 Mangle.Type.JNI));
+            if (mtype == Mangle.Type.METHOD_JNI_LONG) {
                 result.append("__");
                 String typesig = signature(method);
                 TypeSignature newTypeSig = new TypeSignature(elems);
@@ -578,7 +578,7 @@ public class JNIWriter {
                 sig = sig.substring(1);
                 sig = sig.substring(0, sig.lastIndexOf(')'));
                 sig = sig.replace('/', '.');
-                result.append(mangle(sig, Type.JNI));
+                result.append(mangle(sig, Mangle.Type.JNI));
             }
 
             return result.toString();

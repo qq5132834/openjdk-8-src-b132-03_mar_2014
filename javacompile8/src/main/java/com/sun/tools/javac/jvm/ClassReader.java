@@ -939,7 +939,7 @@ public class ClassReader {
 
     protected enum AttributeKind { CLASS, MEMBER };
     protected abstract class AttributeReader {
-        protected AttributeReader(Name name, Version version, Set<AttributeKind> kinds) {
+        protected AttributeReader(Name name, ClassFile.Version version, Set<AttributeKind> kinds) {
             this.name = name;
             this.version = version;
             this.kinds = kinds;
@@ -967,7 +967,7 @@ public class ClassReader {
         protected abstract void read(Symbol sym, int attrLen);
 
         protected final Name name;
-        protected final Version version;
+        protected final ClassFile.Version version;
         protected final Set<AttributeKind> kinds;
     }
 
@@ -1735,13 +1735,13 @@ public class ClassReader {
         }
 
         Attribute.Compound deproxyCompound(CompoundAnnotationProxy a) {
-            ListBuffer<Pair<MethodSymbol,Attribute>> buf =
-                new ListBuffer<Pair<MethodSymbol,Attribute>>();
+            ListBuffer<Pair<Symbol.MethodSymbol,Attribute>> buf =
+                new ListBuffer<Pair<Symbol.MethodSymbol,Attribute>>();
             for (List<Pair<Name,Attribute>> l = a.values;
                  l.nonEmpty();
                  l = l.tail) {
                 MethodSymbol meth = findAccessMethod(a.type, l.head.fst);
-                buf.append(new Pair<MethodSymbol,Attribute>
+                buf.append(new Pair<Symbol.MethodSymbol,Attribute>
                            (meth, deproxy(meth.type.getReturnType(), l.head.snd)));
             }
             return new Attribute.Compound(a.type, buf.toList());
@@ -2872,7 +2872,7 @@ public class ClassReader {
         }
 
         @Override
-        public Kind getKind() {
+        public JavaFileObject.Kind getKind() {
             return getKind(getName());
         }
 
@@ -2917,7 +2917,7 @@ public class ClassReader {
         }
 
         @Override
-        public boolean isNameCompatible(String simpleName, Kind kind) {
+        public boolean isNameCompatible(String simpleName, JavaFileObject.Kind kind) {
             return true; // fail-safe mode
         }
 

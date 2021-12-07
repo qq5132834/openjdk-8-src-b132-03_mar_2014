@@ -613,7 +613,7 @@ public class ClientCodeWrapper {
             this.d = d;
         }
 
-        public Kind getKind() {
+        public Diagnostic.Kind getKind() {
             return d.getKind();
         }
 

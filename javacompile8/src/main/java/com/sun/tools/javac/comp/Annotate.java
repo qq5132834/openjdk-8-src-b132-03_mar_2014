@@ -177,13 +177,13 @@ public class Annotate {
      */
     public class AnnotateRepeatedContext<T extends Attribute.Compound> {
         public final Env<AttrContext> env;
-        public final Map<TypeSymbol, ListBuffer<T>> annotated;
+        public final Map<Symbol.TypeSymbol, ListBuffer<T>> annotated;
         public final Map<T, JCDiagnostic.DiagnosticPosition> pos;
         public final Log log;
         public final boolean isTypeCompound;
 
         public AnnotateRepeatedContext(Env<AttrContext> env,
-                                       Map<TypeSymbol, ListBuffer<T>> annotated,
+                                       Map<Symbol.TypeSymbol, ListBuffer<T>> annotated,
                                        Map<T, JCDiagnostic.DiagnosticPosition> pos,
                                        Log log,
                                        boolean isTypeCompound) {

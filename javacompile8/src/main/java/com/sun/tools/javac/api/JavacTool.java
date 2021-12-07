@@ -66,8 +66,8 @@ public final class JavacTool implements JavaCompiler {
      * Constructor used by service provider mechanism.  The recommended way to
      * obtain an instance of this class is by using {@link #create} or the
      * service provider mechanism.
-     * @see JavaCompiler
-     * @see ToolProvider
+     * @see javax.tools.JavaCompiler
+     * @see javax.tools.ToolProvider
      * @see #create
      */
     @Deprecated

@@ -339,7 +339,7 @@ public class DocCommentParser {
                         nextChar();
                         return m.at(p).UnknownInlineTag(name, List.of(text)).setEndPos(bp);
                     }
-                } else if (tp.getKind() == Kind.INLINE) {
+                } else if (tp.getKind() == TagParser.Kind.INLINE) {
                     DCEndPosTree<?> tree = (DCEndPosTree<?>) tp.parse(p);
                     if (tree != null) {
                         return tree.setEndPos(bp);

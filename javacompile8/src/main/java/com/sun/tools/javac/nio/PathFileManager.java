@@ -34,7 +34,7 @@ import javax.tools.JavaFileManager;
 import javax.tools.JavaFileObject;
 
 /**
- *  File manager based on {@link Path}.
+ *  File manager based on {@link java.nio.file.Path}.
  *
  *  Eventually, this should be moved to javax.tools.
  *  Also, JavaCompiler might reasonably provide a method getPathFileManager,
@@ -69,7 +69,7 @@ public interface PathFileManager extends JavaFileManager {
      * a directory
      */
     Iterable<? extends JavaFileObject> getJavaFileObjectsFromPaths(
-            Iterable<? extends Path> paths);
+        Iterable<? extends Path> paths);
 
     /**
      * Get file objects representing the given paths.

@@ -140,7 +140,7 @@ public class ZipFileIndexArchive implements Archive {
         }
 
         @Override
-        public Kind getKind() {
+        public JavaFileObject.Kind getKind() {
             return getKind(entry.getName());
         }
 
@@ -213,7 +213,7 @@ public class ZipFileIndexArchive implements Archive {
         }
 
         @Override
-        public boolean isNameCompatible(String cn, Kind k) {
+        public boolean isNameCompatible(String cn, JavaFileObject.Kind k) {
             cn.getClass(); // null check
             if (k == Kind.OTHER && getKind() != k)
                 return false;

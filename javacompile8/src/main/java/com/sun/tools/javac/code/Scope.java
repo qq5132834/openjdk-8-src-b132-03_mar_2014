@@ -293,7 +293,7 @@ public class Scope {
      *  qualified name in this (import) scope?
      */
     public boolean includes(Symbol c) {
-        for (Entry e = lookup(c.name);
+        for (Scope.Entry e = lookup(c.name);
              e.scope == this;
              e = e.next()) {
             if (e.sym == c) return true;
@@ -375,7 +375,7 @@ public class Scope {
             public Iterator<Symbol> iterator() {
                 return new Iterator<Symbol>() {
                     private Scope currScope = Scope.this;
-                    private Entry currEntry = elems;
+                    private Scope.Entry currEntry = elems;
                     {
                         update();
                     }
@@ -424,13 +424,13 @@ public class Scope {
         return new Iterable<Symbol>() {
             public Iterator<Symbol> iterator() {
                  return new Iterator<Symbol>() {
-                    Entry currentEntry = lookup(name, sf);
+                    Scope.Entry currentEntry = lookup(name, sf);
 
                     public boolean hasNext() {
                         return currentEntry.scope != null;
                     }
                     public Symbol next() {
-                        Entry prevEntry = currentEntry;
+                        Scope.Entry prevEntry = currentEntry;
                         currentEntry = currentEntry.next(sf);
                         return prevEntry.sym;
                     }
@@ -544,7 +544,7 @@ public class Scope {
         }
 
         public void importAll (Scope fromScope) {
-            for (Entry e = fromScope.elems; e != null; e = e.sibling) {
+            for (Scope.Entry e = fromScope.elems; e != null; e = e.sibling) {
                 if (e.sym.kind == Kinds.TYP && !includes(e.sym))
                     enter(e.sym, fromScope);
             }

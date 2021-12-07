@@ -413,7 +413,7 @@ public class DeferredAttr extends JCTree.Visitor {
         final Symbol msym;
 
         /** method resolution step */
-        final MethodResolutionPhase phase;
+        final Resolve.MethodResolutionPhase phase;
 
         /** inference context */
         final InferenceContext inferenceContext;
@@ -669,7 +669,7 @@ public class DeferredAttr extends JCTree.Visitor {
      * where T is computed by retrieving the type that has already been
      * computed for D during a previous deferred attribution round of the given kind.
      */
-    class DeferredTypeMap extends Mapping {
+    class DeferredTypeMap extends Type.Mapping {
 
         DeferredAttrContext deferredAttrContext;
 
@@ -814,7 +814,7 @@ public class DeferredAttr extends JCTree.Visitor {
     class CheckStuckPolicy extends PolyScanner implements DeferredStuckPolicy, Infer.FreeTypeListener {
 
         Type pt;
-        InferenceContext inferenceContext;
+        Infer.InferenceContext inferenceContext;
         Set<Type> stuckVars = new LinkedHashSet<Type>();
         Set<Type> depVars = new LinkedHashSet<Type>();
 

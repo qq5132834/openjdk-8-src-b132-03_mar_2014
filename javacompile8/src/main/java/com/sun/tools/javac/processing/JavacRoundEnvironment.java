@@ -162,7 +162,7 @@ public class JavacRoundEnvironment implements RoundEnvironment {
 
         @Override
         public Set<Element> scan(Element e, DeclaredType p) {
-            List<? extends AnnotationMirror> annotationMirrors =
+            java.util.List<? extends AnnotationMirror> annotationMirrors =
                 processingEnv.getElementUtils().getAllAnnotationMirrors(e);
             for (AnnotationMirror annotationMirror : annotationMirrors) {
                 if (typeUtil.isSameType(annotationMirror.getAnnotationType(), p))

@@ -890,7 +890,7 @@ public class ClassWriter extends ClassFile {
     void writeCompoundAttribute(Attribute.Compound c) {
         databuf.appendChar(pool.put(typeSig(c.type)));
         databuf.appendChar(c.values.length());
-        for (Pair<MethodSymbol,Attribute> p : c.values) {
+        for (Pair<Symbol.MethodSymbol,Attribute> p : c.values) {
             databuf.appendChar(pool.put(p.fst.name));
             p.snd.accept(awriter);
         }

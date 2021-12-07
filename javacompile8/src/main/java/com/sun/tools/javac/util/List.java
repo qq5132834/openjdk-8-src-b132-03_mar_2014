@@ -429,7 +429,7 @@ public class List<A> extends AbstractCollection<A> implements java.util.List<A> 
                 return false;
             }
             public Object next() {
-                throw new NoSuchElementException();
+                throw new java.util.NoSuchElementException();
             }
             public void remove() {
                 throw new UnsupportedOperationException();

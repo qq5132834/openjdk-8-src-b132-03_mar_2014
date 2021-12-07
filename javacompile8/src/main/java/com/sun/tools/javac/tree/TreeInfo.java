@@ -120,7 +120,7 @@ public class TreeInfo {
 
     /** Return name of operator with given tree tag.
      */
-    public Name operatorName(Tag tag) {
+    public Name operatorName(JCTree.Tag tag) {
         return opname[tag.operatorIndex()];
     }
 
@@ -344,14 +344,14 @@ public class TreeInfo {
     }
 
     public static String getCommentText(Env<?> env, JCTree tree) {
-        DocCommentTable docComments = (tree.hasTag(Tag.TOPLEVEL))
+        DocCommentTable docComments = (tree.hasTag(JCTree.Tag.TOPLEVEL))
                 ? ((JCCompilationUnit) tree).docComments
                 : env.toplevel.docComments;
         return (docComments == null) ? null : docComments.getCommentText(tree);
     }
 
     public static DCTree.DCDocComment getCommentTree(Env<?> env, JCTree tree) {
-        DocCommentTable docComments = (tree.hasTag(Tag.TOPLEVEL))
+        DocCommentTable docComments = (tree.hasTag(JCTree.Tag.TOPLEVEL))
                 ? ((JCCompilationUnit) tree).docComments
                 : env.toplevel.docComments;
         return (docComments == null) ? null : docComments.getCommentTree(tree);
@@ -917,7 +917,7 @@ public class TreeInfo {
 
     /** Map operators to their precedence levels.
      */
-    public static int opPrec(Tag op) {
+    public static int opPrec(JCTree.Tag op) {
         switch(op) {
         case POS:
         case NEG:
@@ -964,7 +964,7 @@ public class TreeInfo {
         }
     }
 
-    static Tree.Kind tagToKind(Tag tag) {
+    static Tree.Kind tagToKind(JCTree.Tag tag) {
         switch (tag) {
         // Postfix expressions
         case POSTINC:           // _ ++

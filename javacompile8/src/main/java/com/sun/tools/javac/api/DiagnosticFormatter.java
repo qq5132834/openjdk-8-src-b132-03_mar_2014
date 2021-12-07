@@ -64,7 +64,7 @@ public interface DiagnosticFormatter<D extends Diagnostic<?>> {
      * @param l locale object to be used for i18n
      * @return string representation of the diagnostic message
      */
-    public String formatMessage(D diag, Locale l);
+    public String formatMessage(D diag,Locale l);
 
     /**
      * Controls the way in which a diagnostic kind is displayed.

@@ -225,7 +225,7 @@ public class JavacTaskImpl extends BasicJavacTask {
     /**
      * Parse the specified files returning a list of abstract syntax trees.
      *
-     * @throws IOException TODO
+     * @throws java.io.IOException TODO
      * @return a list of abstract syntax trees
      */
     public Iterable<? extends CompilationUnitTree> parse() throws IOException {
@@ -263,7 +263,7 @@ public class JavacTaskImpl extends BasicJavacTask {
      * Translate the given abstract syntax trees to elements.
      *
      * @param trees a list of abstract syntax trees.
-     * @throws IOException TODO
+     * @throws java.io.IOException TODO
      * @return a list of elements corresponding to the top level
      * classes in the abstract syntax trees
      */

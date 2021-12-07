@@ -849,7 +849,7 @@ public class JavacFileManager extends BaseFileManager implements StandardJavaFil
      * @return a relative URI
      * @throws IllegalArgumentException if the file name is not
      * relative according to the definition given in {@link
-     * JavaFileManager#getFileForInput}
+     * javax.tools.JavaFileManager#getFileForInput}
      */
     public static String getRelativeName(File file) {
         if (!file.isAbsolute()) {

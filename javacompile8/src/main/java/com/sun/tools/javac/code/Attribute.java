@@ -203,7 +203,7 @@ public abstract class Attribute implements AnnotationValue {
             return null;
         }
 
-        public Compound getValue() {
+        public Attribute.Compound getValue() {
             return this;
         }
 
@@ -273,8 +273,8 @@ public abstract class Attribute implements AnnotationValue {
                         && val.snd instanceof Array) {
                     Array arr = (Array) val.snd;
                     if (arr.values.length != 0
-                            && arr.values[0] instanceof TypeCompound)
-                        return (TypeCompound) arr.values[0];
+                            && arr.values[0] instanceof Attribute.TypeCompound)
+                        return (Attribute.TypeCompound) arr.values[0];
                 }
             }
             return null;
@@ -384,12 +384,12 @@ public abstract class Attribute implements AnnotationValue {
 
     /** A visitor type for dynamic dispatch on the kind of attribute value. */
     public static interface Visitor {
-        void visitConstant(Constant value);
-        void visitClass(Class clazz);
-        void visitCompound(Compound compound);
-        void visitArray(Array array);
-        void visitEnum(Enum e);
-        void visitError(Error e);
+        void visitConstant(Attribute.Constant value);
+        void visitClass(Attribute.Class clazz);
+        void visitCompound(Attribute.Compound compound);
+        void visitArray(Attribute.Array array);
+        void visitEnum(Attribute.Enum e);
+        void visitError(Attribute.Error e);
     }
 
     /** A mirror of java.lang.annotation.RetentionPolicy. */

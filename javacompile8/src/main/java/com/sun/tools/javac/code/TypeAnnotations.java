@@ -287,8 +287,8 @@ public class TypeAnnotations {
                 TypeAnnotationPosition pos) {
             List<Attribute.Compound> annotations = sym.getRawAttributes();
             ListBuffer<Attribute.Compound> declAnnos = new ListBuffer<Attribute.Compound>();
-            ListBuffer<TypeCompound> typeAnnos = new ListBuffer<TypeCompound>();
-            ListBuffer<TypeCompound> onlyTypeAnnos = new ListBuffer<TypeCompound>();
+            ListBuffer<Attribute.TypeCompound> typeAnnos = new ListBuffer<Attribute.TypeCompound>();
+            ListBuffer<Attribute.TypeCompound> onlyTypeAnnos = new ListBuffer<Attribute.TypeCompound>();
 
             for (Attribute.Compound a : annotations) {
                 switch (annotationType(a, sym)) {
@@ -297,12 +297,12 @@ public class TypeAnnotations {
                     break;
                 case BOTH: {
                     declAnnos.append(a);
-                    TypeCompound ta = toTypeCompound(a, pos);
+                    Attribute.TypeCompound ta = toTypeCompound(a, pos);
                     typeAnnos.append(ta);
                     break;
                 }
                 case TYPE: {
-                    TypeCompound ta = toTypeCompound(a, pos);
+                    Attribute.TypeCompound ta = toTypeCompound(a, pos);
                     typeAnnos.append(ta);
                     // Also keep track which annotations are only type annotations
                     onlyTypeAnnos.append(ta);
@@ -318,7 +318,7 @@ public class TypeAnnotations {
                 return;
             }
 
-            List<TypeCompound> typeAnnotations = typeAnnos.toList();
+            List<Attribute.TypeCompound> typeAnnotations = typeAnnos.toList();
 
             if (type == null) {
                 // When type is null, put the type annotations to the symbol.
@@ -390,16 +390,16 @@ public class TypeAnnotations {
         // As a side effect the method sets the type annotation position of "annotations".
         // Note that it is assumed that all annotations share the same position.
         private Type typeWithAnnotations(final JCTree typetree, final Type type,
-                final List<TypeCompound> annotations,
-                final List<TypeCompound> onlyTypeAnnotations) {
+                final List<Attribute.TypeCompound> annotations,
+                final List<Attribute.TypeCompound> onlyTypeAnnotations) {
             // System.out.printf("typeWithAnnotations(typetree: %s, type: %s, annotations: %s, onlyTypeAnnotations: %s)%n",
             //         typetree, type, annotations, onlyTypeAnnotations);
             if (annotations.isEmpty()) {
                 return type;
             }
             if (type.hasTag(TypeTag.ARRAY)) {
-                ArrayType arType = (ArrayType) type.unannotatedType();
-                ArrayType tomodify = new ArrayType(null, arType.tsym);
+                Type.ArrayType arType = (Type.ArrayType) type.unannotatedType();
+                Type.ArrayType tomodify = new Type.ArrayType(null, arType.tsym);
                 Type toreturn;
                 if (type.isAnnotated()) {
                     toreturn = tomodify.annotatedType(type.getAnnotationMirrors());
@@ -414,14 +414,14 @@ public class TypeAnnotations {
                 while (arType.elemtype.hasTag(TypeTag.ARRAY)) {
                     if (arType.elemtype.isAnnotated()) {
                         Type aelemtype = arType.elemtype;
-                        arType = (ArrayType) aelemtype.unannotatedType();
+                        arType = (Type.ArrayType) aelemtype.unannotatedType();
                         ArrayType prevToMod = tomodify;
-                        tomodify = new ArrayType(null, arType.tsym);
+                        tomodify = new Type.ArrayType(null, arType.tsym);
                         prevToMod.elemtype = tomodify.annotatedType(arType.elemtype.getAnnotationMirrors());
                     } else {
-                        arType = (ArrayType) arType.elemtype;
-                        tomodify.elemtype = new ArrayType(null, arType.tsym);
-                        tomodify = (ArrayType) tomodify.elemtype;
+                        arType = (Type.ArrayType) arType.elemtype;
+                        tomodify.elemtype = new Type.ArrayType(null, arType.tsym);
+                        tomodify = (Type.ArrayType) tomodify.elemtype;
                     }
                     arTree = arrayTypeTree(arTree.elemtype);
                     depth = depth.append(TypePathEntry.ARRAY);
@@ -430,7 +430,7 @@ public class TypeAnnotations {
                 tomodify.elemtype = arelemType;
                 {
                     // All annotations share the same position; modify the first one.
-                    TypeCompound a = annotations.get(0);
+                    Attribute.TypeCompound a = annotations.get(0);
                     TypeAnnotationPosition p = a.position;
                     p.location = p.location.prependList(depth.toList());
                 }
@@ -529,7 +529,7 @@ public class TypeAnnotations {
                     // Only need to change the annotation positions
                     // if they are on an enclosed type.
                     // All annotations share the same position; modify the first one.
-                    TypeCompound a = annotations.get(0);
+                    Attribute.TypeCompound a = annotations.get(0);
                     TypeAnnotationPosition p = a.position;
                     p.location = p.location.appendList(depth.toList());
                 }
@@ -569,9 +569,9 @@ public class TypeAnnotations {
          */
         private Type typeWithAnnotations(final Type type,
                 final Type stopAt,
-                final List<TypeCompound> annotations) {
+                final List<Attribute.TypeCompound> annotations) {
             Visitor<Type, List<TypeCompound>> visitor =
-                    new Visitor<Type, List<TypeCompound>>() {
+                    new Type.Visitor<Type, List<Attribute.TypeCompound>>() {
                 @Override
                 public Type visitClassType(ClassType t, List<TypeCompound> s) {
                     // assert that t.constValue() == null?
@@ -654,9 +654,9 @@ public class TypeAnnotations {
             return type.accept(visitor, annotations);
         }
 
-        private TypeCompound toTypeCompound(Attribute.Compound a, TypeAnnotationPosition p) {
+        private Attribute.TypeCompound toTypeCompound(Attribute.Compound a, TypeAnnotationPosition p) {
             // It is safe to alias the position.
-            return new TypeCompound(a, p);
+            return new Attribute.TypeCompound(a, p);
         }
 
 
@@ -1224,11 +1224,11 @@ public class TypeAnnotations {
         private void copyNewClassAnnotationsToOwner(JCNewClass tree) {
             Symbol sym = tree.def.sym;
             TypeAnnotationPosition pos = new TypeAnnotationPosition();
-            ListBuffer<TypeCompound> newattrs =
-                new ListBuffer<TypeCompound>();
+            ListBuffer<Attribute.TypeCompound> newattrs =
+                new ListBuffer<Attribute.TypeCompound>();
 
-            for (TypeCompound old : sym.getRawTypeAttributes()) {
-                newattrs.append(new TypeCompound(old.type, old.values,
+            for (Attribute.TypeCompound old : sym.getRawTypeAttributes()) {
+                newattrs.append(new Attribute.TypeCompound(old.type, old.values,
                                                            pos));
             }
 
@@ -1339,7 +1339,7 @@ public class TypeAnnotations {
                 // attribute might be null during DeferredAttr;
                 // we will be back later.
                 if (anno.attribute != null) {
-                    ((TypeCompound) anno.attribute).position = position;
+                    ((Attribute.TypeCompound) anno.attribute).position = position;
                 }
             }
         }

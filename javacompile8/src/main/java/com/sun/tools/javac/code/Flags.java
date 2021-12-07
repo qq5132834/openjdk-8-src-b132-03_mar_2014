@@ -300,7 +300,7 @@ public class Flags {
     public static Set<Modifier> asModifierSet(long flags) {
         Set<Modifier> modifiers = modifierSets.get(flags);
         if (modifiers == null) {
-            modifiers = EnumSet.noneOf(Modifier.class);
+            modifiers = java.util.EnumSet.noneOf(Modifier.class);
             if (0 != (flags & PUBLIC))    modifiers.add(Modifier.PUBLIC);
             if (0 != (flags & PROTECTED)) modifiers.add(Modifier.PROTECTED);
             if (0 != (flags & PRIVATE))   modifiers.add(Modifier.PRIVATE);

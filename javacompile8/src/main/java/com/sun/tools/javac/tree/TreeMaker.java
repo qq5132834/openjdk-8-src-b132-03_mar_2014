@@ -44,7 +44,7 @@ import static com.sun.tools.javac.code.TypeTag.*;
  *  This code and its internal interfaces are subject to change or
  *  deletion without notice.</b>
  */
-public class TreeMaker implements Factory {
+public class TreeMaker implements JCTree.Factory {
 
     /** The context key for the tree factory. */
     protected static final Context.Key<TreeMaker> treeMakerKey =
@@ -393,19 +393,19 @@ public class TreeMaker implements Factory {
         return tree;
     }
 
-    public JCAssignOp Assignop(Tag opcode, JCTree lhs, JCTree rhs) {
+    public JCAssignOp Assignop(JCTree.Tag opcode, JCTree lhs, JCTree rhs) {
         JCAssignOp tree = new JCAssignOp(opcode, lhs, rhs, null);
         tree.pos = pos;
         return tree;
     }
 
-    public JCUnary Unary(Tag opcode, JCExpression arg) {
+    public JCUnary Unary(JCTree.Tag opcode, JCExpression arg) {
         JCUnary tree = new JCUnary(opcode, arg);
         tree.pos = pos;
         return tree;
     }
 
-    public JCBinary Binary(Tag opcode, JCExpression lhs, JCExpression rhs) {
+    public JCBinary Binary(JCTree.Tag opcode, JCExpression lhs, JCExpression rhs) {
         JCBinary tree = new JCBinary(opcode, lhs, rhs, null);
         tree.pos = pos;
         return tree;
@@ -801,7 +801,7 @@ public class TreeMaker implements Factory {
         }
         public JCAnnotation visitCompoundInternal(Attribute.Compound compound) {
             ListBuffer<JCExpression> args = new ListBuffer<JCExpression>();
-            for (List<Pair<MethodSymbol,Attribute>> values = compound.values; values.nonEmpty(); values=values.tail) {
+            for (List<Pair<Symbol.MethodSymbol,Attribute>> values = compound.values; values.nonEmpty(); values=values.tail) {
                 Pair<MethodSymbol,Attribute> pair = values.head;
                 JCExpression valueTree = translate(pair.snd);
                 args.append(Assign(Ident(pair.fst), valueTree).setType(valueTree.type));
@@ -810,7 +810,7 @@ public class TreeMaker implements Factory {
         }
         public JCAnnotation visitTypeCompoundInternal(Attribute.TypeCompound compound) {
             ListBuffer<JCExpression> args = new ListBuffer<JCExpression>();
-            for (List<Pair<MethodSymbol,Attribute>> values = compound.values; values.nonEmpty(); values=values.tail) {
+            for (List<Pair<Symbol.MethodSymbol,Attribute>> values = compound.values; values.nonEmpty(); values=values.tail) {
                 Pair<MethodSymbol,Attribute> pair = values.head;
                 JCExpression valueTree = translate(pair.snd);
                 args.append(Assign(Ident(pair.fst), valueTree).setType(valueTree.type));

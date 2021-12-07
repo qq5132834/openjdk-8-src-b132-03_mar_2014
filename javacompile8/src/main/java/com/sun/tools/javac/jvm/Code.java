@@ -1407,7 +1407,7 @@ public class Code {
          *  Invariant: all elements of a chain list have the same stacksize
          *  and compatible stack and register contents.
          */
-        State state;
+        Code.State state;
 
         /** The next jump in the list.
          */
@@ -1416,7 +1416,7 @@ public class Code {
         /** Construct a chain from its jump position, stacksize, previous
          *  chain, and machine state.
          */
-        public Chain(int pc, Chain next, State state) {
+        public Chain(int pc, Chain next, Code.State state) {
             this.pc = pc;
             this.next = next;
             this.state = state;

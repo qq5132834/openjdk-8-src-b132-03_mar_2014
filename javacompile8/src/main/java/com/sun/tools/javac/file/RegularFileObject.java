@@ -89,7 +89,7 @@ class RegularFileObject extends BaseFileObject {
     }
 
     @Override
-    public Kind getKind() {
+    public JavaFileObject.Kind getKind() {
         return getKind(name);
     }
 
@@ -172,7 +172,7 @@ class RegularFileObject extends BaseFileObject {
     }
 
     @Override
-    public boolean isNameCompatible(String cn, Kind kind) {
+    public boolean isNameCompatible(String cn, JavaFileObject.Kind kind) {
         cn.getClass();
         // null check
         if (kind == Kind.OTHER && getKind() != kind) {
