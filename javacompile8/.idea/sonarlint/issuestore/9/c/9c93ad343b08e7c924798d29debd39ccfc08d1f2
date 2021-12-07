@@ -1,0 +1,412 @@
+
+K
+java:S1191"5Use classes from the Java API instead of Sun classes.(¢—ÓÒ
+]	java:S107ë"BConstructor has 10 parameters, which is greater than 7 authorized.(ƒí‘Šùÿÿÿÿ
+W	java:S107"<Method has 9 parameters, which is greater than 7 authorized.(ó¸¦ûÿÿÿÿ
+a	java:S112¿"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+k
+java:S1104…"OMake pos a static final constant or non-public and provide accessors if needed.(Ø§ö úÿÿÿÿ
+l
+java:S1104‰"PMake type a static final constant or non-public and provide accessors if needed.(±§¦şÿÿÿÿ
+z
+java:S1104á"^Make packageAnnotations a static final constant or non-public and provide accessors if needed.(£éüÿÿÿÿ
+k
+java:S1104ã"OMake pid a static final constant or non-public and provide accessors if needed.(ºŞ—¬üÿÿÿÿ
+g
+java:S1104å"PMake defs a static final constant or non-public and provide accessors if needed.(òò‘È
+r
+java:S1104ç"VMake sourcefile a static final constant or non-public and provide accessors if needed.(ÃŒøÿÿÿÿ
+i
+java:S1104é"RMake packge a static final constant or non-public and provide accessors if needed.(Ì¢¢ó
+s
+java:S1104ë"\Make namedImportScope a static final constant or non-public and provide accessors if needed.(Ûìí¯
+w
+java:S1104í"[Make starImportScope a static final constant or non-public and provide accessors if needed.(Òã‰°ûÿÿÿÿ
+j
+java:S1104ï"SMake lineMap a static final constant or non-public and provide accessors if needed.(²›Ïş
+n
+java:S1104ò"WMake docComments a static final constant or non-public and provide accessors if needed.(’˜–…
+t
+java:S1104õ"XMake endPositions a static final constant or non-public and provide accessors if needed.(ãÁÁøÿÿÿÿ
+o
+java:S1104³"XMake staticImport a static final constant or non-public and provide accessors if needed.(Ù˜Â‹
+n
+java:S1104µ"RMake qualid a static final constant or non-public and provide accessors if needed.(ÁÏ—¶ûÿÿÿÿ
+k
+java:S1104÷"TMake polyKind a static final constant or non-public and provide accessors if needed.(«Êô¼
+i
+java:S1104…"SMake targets a static final constant or non-public and provide accessors if needed.(ª¤å
+l
+java:S1104‘"PMake mods a static final constant or non-public and provide accessors if needed.(°‡ø¦ıÿÿÿÿ
+l
+java:S1104“"PMake name a static final constant or non-public and provide accessors if needed.(»ô¬òıÿÿÿÿ
+k
+java:S1104•"TMake typarams a static final constant or non-public and provide accessors if needed.(á›Ö€
+q
+java:S1104—"UMake extending a static final constant or non-public and provide accessors if needed.(ûÙéûÿÿÿÿ
+t
+java:S1104™"XMake implementing a static final constant or non-public and provide accessors if needed.(“¸‘–ûÿÿÿÿ
+g
+java:S1104›"PMake defs a static final constant or non-public and provide accessors if needed.(òò‘È
+k
+java:S1104"OMake sym a static final constant or non-public and provide accessors if needed.(…¦Øşÿÿÿÿ
+l
+java:S1104Ø"PMake mods a static final constant or non-public and provide accessors if needed.(°‡ø¦ıÿÿÿÿ
+l
+java:S1104Ú"PMake name a static final constant or non-public and provide accessors if needed.(»ô¬òıÿÿÿÿ
+o
+java:S1104Ü"SMake restype a static final constant or non-public and provide accessors if needed.(éÈ±ùÿÿÿÿ
+k
+java:S1104Ş"TMake typarams a static final constant or non-public and provide accessors if needed.(á›Ö€
+k
+java:S1104à"UMake recvparam a static final constant or non-public and provide accessors if needed.(ÁäŠ7
+n
+java:S1104â"RMake params a static final constant or non-public and provide accessors if needed.(Æˆ²áøÿÿÿÿ
+n
+java:S1104ä"RMake thrown a static final constant or non-public and provide accessors if needed.(èñ‚İıÿÿÿÿ
+g
+java:S1104æ"PMake body a static final constant or non-public and provide accessors if needed.(¿‘§
+t
+java:S1104è"XMake defaultValue a static final constant or non-public and provide accessors if needed.(Û‰›ÿÿÿÿÿ
+k
+java:S1104ê"OMake sym a static final constant or non-public and provide accessors if needed.(øı‰Òüÿÿÿÿ
+l
+java:S1104¨"PMake mods a static final constant or non-public and provide accessors if needed.(°‡ø¦ıÿÿÿÿ
+l
+java:S1104ª"PMake name a static final constant or non-public and provide accessors if needed.(»ô¬òıÿÿÿÿ
+p
+java:S1104¬"TMake nameexpr a static final constant or non-public and provide accessors if needed.(ã¼Şƒûÿÿÿÿ
+j
+java:S1104®"SMake vartype a static final constant or non-public and provide accessors if needed.(ê‰ÆÒ
+l
+java:S1104°"PMake init a static final constant or non-public and provide accessors if needed.(ßÒ“Æùÿÿÿÿ
+f
+java:S1104²"OMake sym a static final constant or non-public and provide accessors if needed.(Ù“„Í
+m
+java:S1104ı"QMake flags a static final constant or non-public and provide accessors if needed.(íÔ›¬üÿÿÿÿ
+g
+java:S1104ÿ"QMake stats a static final constant or non-public and provide accessors if needed.(Í¥ã[
+i
+java:S1104"RMake endpos a static final constant or non-public and provide accessors if needed.(ë˜±£
+f
+java:S1104"PMake body a static final constant or non-public and provide accessors if needed.(¯Ô¹
+f
+java:S1104"PMake cond a static final constant or non-public and provide accessors if needed.(ãì…z
+f
+java:S1104¸"PMake cond a static final constant or non-public and provide accessors if needed.(ãì…z
+f
+java:S1104¹"PMake body a static final constant or non-public and provide accessors if needed.(¯Ô¹
+l
+java:S1104Ó"PMake init a static final constant or non-public and provide accessors if needed.(òËçÿüÿÿÿÿ
+f
+java:S1104Ô"PMake cond a static final constant or non-public and provide accessors if needed.(ãì…z
+l
+java:S1104Õ"PMake step a static final constant or non-public and provide accessors if needed.(ç—œãıÿÿÿÿ
+f
+java:S1104Ö"PMake body a static final constant or non-public and provide accessors if needed.(¯Ô¹
+f
+java:S1104ü"OMake var a static final constant or non-public and provide accessors if needed.(ÅÆÜì
+g
+java:S1104ı"PMake expr a static final constant or non-public and provide accessors if needed.(ÕÄá°
+f
+java:S1104ş"PMake body a static final constant or non-public and provide accessors if needed.(¯Ô¹
+g
+java:S1104™"QMake label a static final constant or non-public and provide accessors if needed.(€[
+f
+java:S1104š"PMake body a static final constant or non-public and provide accessors if needed.(¯Ô¹
+k
+java:S1104²"TMake selector a static final constant or non-public and provide accessors if needed.(ĞÍ²±
+m
+java:S1104³"QMake cases a static final constant or non-public and provide accessors if needed.(û„¦şÿÿÿÿ
+k
+java:S1104Ì"OMake pat a static final constant or non-public and provide accessors if needed.( Ÿºìûÿÿÿÿ
+g
+java:S1104Í"QMake stats a static final constant or non-public and provide accessors if needed.(Í¥ã[
+l
+java:S1104æ"PMake lock a static final constant or non-public and provide accessors if needed.(ı€–şÿÿÿÿÿ
+g
+java:S1104ç"PMake body a static final constant or non-public and provide accessors if needed.(¿‘§
+g
+java:S1104€	"PMake body a static final constant or non-public and provide accessors if needed.(¿‘§
+k
+java:S1104	"TMake catchers a static final constant or non-public and provide accessors if needed.(ğ¾Æâ
+l
+java:S1104‚	"UMake finalizer a static final constant or non-public and provide accessors if needed.(Ş“‰¹
+q
+java:S1104ƒ	"UMake resources a static final constant or non-public and provide accessors if needed.(ï¿‹Çıÿÿÿÿ
+}
+java:S1104„	"fMake finallyCanCompleteNormally a static final constant or non-public and provide accessors if needed.(¯éú“
+m
+java:S1104©	"QMake param a static final constant or non-public and provide accessors if needed.(“‡œ‹ıÿÿÿÿ
+g
+java:S1104ª	"PMake body a static final constant or non-public and provide accessors if needed.(¿‘§
+f
+java:S1104Ã	"PMake cond a static final constant or non-public and provide accessors if needed.(ãì…z
+p
+java:S1104Ä	"TMake truepart a static final constant or non-public and provide accessors if needed.(õ¨˜ôüÿÿÿÿ
+l
+java:S1104Å	"UMake falsepart a static final constant or non-public and provide accessors if needed.(²ûöÿ
+f
+java:S1104ã	"PMake cond a static final constant or non-public and provide accessors if needed.(ãì…z
+k
+java:S1104ä	"TMake thenpart a static final constant or non-public and provide accessors if needed.(¢ïï
+j
+java:S1104å	"TMake elsepart a static final constant or non-public and provide accessors if needed.(Ôâç?
+g
+java:S1104„
+"PMake expr a static final constant or non-public and provide accessors if needed.(ÕÄá°
+g
+java:S1104«
+"QMake label a static final constant or non-public and provide accessors if needed.(€[
+i
+java:S1104¬
+"RMake target a static final constant or non-public and provide accessors if needed.(¬µ¢¿
+g
+java:S1104Ä
+"QMake label a static final constant or non-public and provide accessors if needed.(€[
+i
+java:S1104Å
+"RMake target a static final constant or non-public and provide accessors if needed.(¬µ¢¿
+g
+java:S1104İ
+"PMake expr a static final constant or non-public and provide accessors if needed.(ÕÄá°
+g
+java:S1104ô
+"PMake expr a static final constant or non-public and provide accessors if needed.(ÕÄá°
+f
+java:S1104‹"PMake cond a static final constant or non-public and provide accessors if needed.(ãì…z
+i
+java:S1104Œ"RMake detail a static final constant or non-public and provide accessors if needed.(ä­·
+p
+java:S1104¥"TMake typeargs a static final constant or non-public and provide accessors if needed.(Êµ¨¡ıÿÿÿÿ
+l
+java:S1104¦"PMake meth a static final constant or non-public and provide accessors if needed.(Æš¬Êùÿÿÿÿ
+g
+java:S1104§"PMake args a static final constant or non-public and provide accessors if needed.(ŞúîÖ
+v
+java:S1104¨"ZMake varargsElement a static final constant or non-public and provide accessors if needed.(äÊİÆşÿÿÿÿ
+g
+java:S1104Ğ"PMake encl a static final constant or non-public and provide accessors if needed.(Ğ¯œ¬
+p
+java:S1104Ñ"TMake typeargs a static final constant or non-public and provide accessors if needed.(Êµ¨¡ıÿÿÿÿ
+g
+java:S1104Ò"QMake clazz a static final constant or non-public and provide accessors if needed.(§”ƒI
+g
+java:S1104Ó"PMake args a static final constant or non-public and provide accessors if needed.(ŞúîÖ
+k
+java:S1104Ô"OMake def a static final constant or non-public and provide accessors if needed.(¬çúÿÿÿÿ
+s
+java:S1104Õ"WMake constructor a static final constant or non-public and provide accessors if needed.(øŸÀ›ùÿÿÿÿ
+v
+java:S1104Ö"ZMake varargsElement a static final constant or non-public and provide accessors if needed.(äÊİÆşÿÿÿÿ
+r
+java:S1104×"[Make constructorType a static final constant or non-public and provide accessors if needed.(§’î‡
+p
+java:S1104‚"TMake elemtype a static final constant or non-public and provide accessors if needed.(ÌÆúËüÿÿÿÿ
+f
+java:S1104ƒ"PMake dims a static final constant or non-public and provide accessors if needed.(›½Ô 
+s
+java:S1104…"WMake annotations a static final constant or non-public and provide accessors if needed.(›Ÿèÿÿÿÿÿ
+q
+java:S1104‡"ZMake dimAnnotations a static final constant or non-public and provide accessors if needed.(§·ª×
+h
+java:S1104ˆ"QMake elems a static final constant or non-public and provide accessors if needed.(Ã¿Â°
+n
+java:S1104¼"RMake params a static final constant or non-public and provide accessors if needed.(Æˆ²áøÿÿÿÿ
+f
+java:S1104½"PMake body a static final constant or non-public and provide accessors if needed.(Â¢…G
+{
+java:S1104¾"_Make canCompleteNormally a static final constant or non-public and provide accessors if needed.(“÷âºüÿÿÿÿ
+q
+java:S1104¿"UMake paramKind a static final constant or non-public and provide accessors if needed.(êöµúşÿÿÿÿ
+g
+java:S1104ò"PMake expr a static final constant or non-public and provide accessors if needed.(ÕÄá°
+k
+java:S1104‰"OMake lhs a static final constant or non-public and provide accessors if needed.(°éï¢ùÿÿÿÿ
+k
+java:S1104Š"OMake rhs a static final constant or non-public and provide accessors if needed.(òÜÌ÷ıÿÿÿÿ
+k
+java:S1104¤"OMake lhs a static final constant or non-public and provide accessors if needed.(°éï¢ùÿÿÿÿ
+k
+java:S1104¥"OMake rhs a static final constant or non-public and provide accessors if needed.(òÜÌ÷ıÿÿÿÿ
+p
+java:S1104¦"TMake operator a static final constant or non-public and provide accessors if needed.(ìüÓ—øÿÿÿÿ
+f
+java:S1104Å"OMake arg a static final constant or non-public and provide accessors if needed.(ËÀ÷
+p
+java:S1104Æ"TMake operator a static final constant or non-public and provide accessors if needed.(ìüÓ—øÿÿÿÿ
+k
+java:S1104æ"OMake lhs a static final constant or non-public and provide accessors if needed.(°éï¢ùÿÿÿÿ
+k
+java:S1104ç"OMake rhs a static final constant or non-public and provide accessors if needed.(òÜÌ÷ıÿÿÿÿ
+p
+java:S1104è"TMake operator a static final constant or non-public and provide accessors if needed.(ìüÓ—øÿÿÿÿ
+h
+java:S1104‰"QMake clazz a static final constant or non-public and provide accessors if needed.(£ş”±
+g
+java:S1104Š"PMake expr a static final constant or non-public and provide accessors if needed.(ÕÄá°
+g
+java:S1104£"PMake expr a static final constant or non-public and provide accessors if needed.(ÕÄá°
+h
+java:S1104¤"QMake clazz a static final constant or non-public and provide accessors if needed.(£ş”±
+o
+java:S1104½"SMake indexed a static final constant or non-public and provide accessors if needed.(¾ÎùÂÿÿÿÿÿ
+h
+java:S1104¾"QMake index a static final constant or non-public and provide accessors if needed.(ÎÇÕé
+p
+java:S1104Ø"TMake selected a static final constant or non-public and provide accessors if needed.(³«¥Úùÿÿÿÿ
+l
+java:S1104Ú"PMake name a static final constant or non-public and provide accessors if needed.(»ô¬òıÿÿÿÿ
+f
+java:S1104Ü"OMake sym a static final constant or non-public and provide accessors if needed.(üÄÇ–
+l
+java:S1104÷"PMake mode a static final constant or non-public and provide accessors if needed.(õØ¬ãùÿÿÿÿ
+l
+java:S1104ø"PMake kind a static final constant or non-public and provide accessors if needed.(üï†íøÿÿÿÿ
+l
+java:S1104ù"PMake name a static final constant or non-public and provide accessors if needed.(»ô¬òıÿÿÿÿ
+g
+java:S1104ú"PMake expr a static final constant or non-public and provide accessors if needed.(ÕÄá°
+p
+java:S1104û"TMake typeargs a static final constant or non-public and provide accessors if needed.(Êµ¨¡ıÿÿÿÿ
+f
+java:S1104ü"OMake sym a static final constant or non-public and provide accessors if needed.(üÄÇ–
+v
+java:S1104ı"ZMake varargsElement a static final constant or non-public and provide accessors if needed.(äÊİÆşÿÿÿÿ
+s
+java:S1104ş"WMake refPolyKind a static final constant or non-public and provide accessors if needed.(ó©¶Óúÿÿÿÿ
+w
+java:S1104ÿ"[Make ownerAccessible a static final constant or non-public and provide accessors if needed.(Ù¯Ì¹üÿÿÿÿ
+t
+java:S1104€"XMake overloadKind a static final constant or non-public and provide accessors if needed.(’Áœíıÿÿÿÿ
+l
+java:S1104Í"PMake name a static final constant or non-public and provide accessors if needed.(»ô¬òıÿÿÿÿ
+f
+java:S1104Ï"OMake sym a static final constant or non-public and provide accessors if needed.(üÄÇ–
+o
+java:S1104ç"SMake typetag a static final constant or non-public and provide accessors if needed.(¯ìµÏúÿÿÿÿ
+m
+java:S1104é"QMake value a static final constant or non-public and provide accessors if needed.(’åéäøÿÿÿÿ
+o
+java:S1104™"SMake typetag a static final constant or non-public and provide accessors if needed.(¯ìµÏúÿÿÿÿ
+p
+java:S1104³"TMake elemtype a static final constant or non-public and provide accessors if needed.(ÌÆúËüÿÿÿÿ
+g
+java:S1104Ê"QMake clazz a static final constant or non-public and provide accessors if needed.(§”ƒI
+q
+java:S1104Ë"UMake arguments a static final constant or non-public and provide accessors if needed.(û¢õéûÿÿÿÿ
+t
+java:S1104ç"XMake alternatives a static final constant or non-public and provide accessors if needed.(Ù‰’ùÿÿÿÿ
+n
+java:S1104ƒ"RMake bounds a static final constant or non-public and provide accessors if needed.(ÕÊªûÿÿÿÿ
+l
+java:S1104Ÿ"PMake name a static final constant or non-public and provide accessors if needed.(»ô¬òıÿÿÿÿ
+n
+java:S1104¡"RMake bounds a static final constant or non-public and provide accessors if needed.(ÕÊªûÿÿÿÿ
+s
+java:S1104£"WMake annotations a static final constant or non-public and provide accessors if needed.(›Ÿèÿÿÿÿÿ
+g
+java:S1104¿"PMake kind a static final constant or non-public and provide accessors if needed.(ìë„ï
+h
+java:S1104À"QMake inner a static final constant or non-public and provide accessors if needed.(‡¶ïº
+g
+java:S1104á"PMake kind a static final constant or non-public and provide accessors if needed.(Æö»Ä
+q
+java:S1104ù"ZMake annotationType a static final constant or non-public and provide accessors if needed.(®¼Ç£
+g
+java:S1104ú"PMake args a static final constant or non-public and provide accessors if needed.(ŞúîÖ
+l
+java:S1104ş"UMake attribute a static final constant or non-public and provide accessors if needed.( §ĞÕ
+m
+java:S1104š"QMake flags a static final constant or non-public and provide accessors if needed.(íÔ›¬üÿÿÿÿ
+s
+java:S1104›"WMake annotations a static final constant or non-public and provide accessors if needed.(›Ÿèÿÿÿÿÿ
+s
+java:S1104¶"WMake annotations a static final constant or non-public and provide accessors if needed.(›Ÿèÿÿÿÿÿ
+v
+java:S1104·"ZMake underlyingType a static final constant or non-public and provide accessors if needed.(ºùÊÃıÿÿÿÿ
+g
+java:S1104Ô"PMake errs a static final constant or non-public and provide accessors if needed.(š†ïÇ
+l
+java:S1104í"PMake defs a static final constant or non-public and provide accessors if needed.(ÑÆÈøÿÿÿÿ
+l
+java:S1104î"PMake expr a static final constant or non-public and provide accessors if needed.(«„ã«øÿÿÿÿ
+{
+java:S1845Å"_Rename method "pos" to prevent any misunderstanding/clash with field "pos" defined on line 389.(Å­¹Ùıÿÿÿÿ
+p	java:S115Ş"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ğæ
+j
+java:S2975»"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ
+u
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ñó±²ÿÿÿÿÿ
+a
+java:S1124Ì"EReorder the modifiers to comply with the Java Language Specification.(ø¿û’şÿÿÿÿ
+a
+java:S1124Ù"EReorder the modifiers to comply with the Java Language Specification.(ö†ÕÚûÿÿÿÿ
+\
+java:S1124ê"EReorder the modifiers to comply with the Java Language Specification.(„²—Í
+P
+java:S5993ÿ"9Change the visibility of this constructor to "protected".(¯äü¨
+\
+java:S1124ı"EReorder the modifiers to comply with the Java Language Specification.(¯§¤Á
+R	java:S125ı"<This block of commented-out lines of code should be removed.(À¼ç
+N
+java:S1135ü"2Complete the task associated to this TODO comment.(ê’ìñùÿÿÿÿ
+W	java:S125È"<This block of commented-out lines of code should be removed.(±ÉŒŸùÿÿÿÿ
+=
+java:S1452Ş"&Remove usage of generic wildcard type.(‚Ó˜
+B
+java:S1452İ"&Remove usage of generic wildcard type.(ÚüÑÁÿÿÿÿÿ
+c	java:S100†"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù¿2
+d	java:S100‰"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÂ€ï
+d	java:S100Š"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬„³İ
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó¸¦ûÿÿÿÿ
+d	java:S100™"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ŞôÛ
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Úø™Ôşÿÿÿÿ
+d	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›”¡Ï
+d	java:S100Ÿ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÉéŞ
+i	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸šêİûÿÿÿÿ
+i	java:S100¡"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÒºùÿÿÿÿ
+d	java:S100¥"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßõ½
+d	java:S100¦"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é­îÍ
+i	java:S100§"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ™”áüÿÿÿÿ
+i	java:S100¨"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥£µÛùÿÿÿÿ
+d	java:S100©"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•İ
+d	java:S100ª"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¬²’
+d	java:S100«"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆñ¨ø
+d	java:S100¯"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö¦Äø
+i	java:S100°"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼›­Ìşÿÿÿÿ
+i	java:S100³"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºôŞüùÿÿÿÿ
+i	java:S100´"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ¡‰•øÿÿÿÿ
+d	java:S100µ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß³‰û
+c	java:S100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñˆ§0
+i	java:S100·"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ææìœúÿÿÿÿ
+i	java:S100¸"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñú°Çıÿÿÿÿ
+i	java:S100¹"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢áÙ÷ùÿÿÿÿ
+i	java:S100º"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ª¸¥ûÿÿÿÿ
+c	java:S100½"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö÷½
+c	java:S100Â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê€‚v
+c	java:S100Å"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°”Ë1
+d	java:S100Æ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üğÁ£
+i	java:S100Ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º–ışÿÿÿÿ
+i	java:S100È"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—¯³“ıÿÿÿÿ
+d	java:S100É"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãõ­Ä
+d	java:S100Ê"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ÿÕ©
+d	java:S100Ë"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ÒÒ
+d	java:S100Ì"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ÓÙÍ
+d	java:S100Í"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô¤­­
+i	java:S100Î"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ»¸˜üÿÿÿÿ
+i	java:S100Ï"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È—ğ•úÿÿÿÿ
+d	java:S100Ğ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬¾°¢
+i	java:S100Ñ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö¤†Ãøÿÿÿÿ
+d	java:S100Ò"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ğä¨
+d	java:S100Ó"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ÕŞ†
+i	java:S100Ô"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œªŞ¹úÿÿÿÿ
+i	java:S100Õ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷¥÷Üùÿÿÿÿ
+d	java:S100Ö"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š½Áş
+d	java:S100×"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ğ«Ì
+i	java:S100Ø"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Œ—‚ùÿÿÿÿ
+d	java:S100Ù"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´şÕÍ
+\
+java:S1124Ş"EReorder the modifiers to comply with the Java Language Specification.(Ô­Ÿ²
+G
+java:S1172–"+Remove this unused method parameter "that".(§È¼ûÿÿÿÿ

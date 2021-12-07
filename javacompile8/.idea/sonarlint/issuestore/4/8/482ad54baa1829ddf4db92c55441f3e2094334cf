@@ -1,0 +1,5 @@
+
+P
+java:S1191"5Use classes from the Java API instead of Sun classes.(ÚÕåþüÿÿÿÿ
+‡
+java:S1130)"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Þýÿÿÿÿ

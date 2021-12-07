@@ -1,0 +1,11 @@
+
+K
+java:S1191"5Use classes from the Java API instead of Sun classes.(¬ÓÆÉ
+Š
+java:S1845X"tRename field "name" to prevent any misunderstanding/clash with method "name" defined in superclass "java.lang.Enum".(³Êøü
+Q	java:S125."<This block of commented-out lines of code should be removed.(ëˆŞÒ
+Q	java:S1251"<This block of commented-out lines of code should be removed.(’Ÿ®ÿ
+t
+java:S2293J"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ñƒ¾èüÿÿÿÿ
+n
+java:S2293Z"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÚáÃ

@@ -1,0 +1,133 @@
+
+K
+java:S1191"5Use classes from the Java API instead of Sun classes.(Ü«´’
+I
+java:S1172m".Remove this unused method parameter "context".(½‹ִÿÿÿÿÿ
+n
+java:S2293n"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯₪Z
+p
+java:S2293‹"YReplace the type specification in this constructor call with the diamond operator ("<>").(§×•״
+p
+java:S2293›"YReplace the type specification in this constructor call with the diamond operator ("<>").(­₪Û־
+u
+java:S2293¬"YReplace the type specification in this constructor call with the diamond operator ("<>").(סךטסûÿÿÿÿ
+`
+java:S1134ֽ"DTake the required action to fix the issue indicated by this comment.(םיׁ‏ÿÿÿÿ
+=
+java:S1181ß"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147ß"ECombine this catch with the one at line 221, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181ל"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147ל"ECombine this catch with the one at line 234, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181ש"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147ש"ECombine this catch with the one at line 247, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181†"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147†"ECombine this catch with the one at line 260, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181“"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147“"ECombine this catch with the one at line 273, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181 "!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147 "ECombine this catch with the one at line 286, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181­"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147­"ECombine this catch with the one at line 299, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181÷"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147÷"ECombine this catch with the one at line 312, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181ַ"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147ַ"ECombine this catch with the one at line 325, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181װ"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147װ"ECombine this catch with the one at line 338, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181ב"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147ב"ECombine this catch with the one at line 351, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181מ"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147מ"ECombine this catch with the one at line 364, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181û"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147û"ECombine this catch with the one at line 377, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181•"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147•"ECombine this catch with the one at line 403, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181¢"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147¢"ECombine this catch with the one at line 416, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181¯"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147¯"ECombine this catch with the one at line 429, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181¼"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147¼"ECombine this catch with the one at line 442, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181ֹ"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147ֹ"ECombine this catch with the one at line 455, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181ײ"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147ײ"ECombine this catch with the one at line 468, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181ד"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147ד"ECombine this catch with the one at line 481, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181נ"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147נ"ECombine this catch with the one at line 494, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181‎"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147‎"ECombine this catch with the one at line 507, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181•"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147•"ECombine this catch with the one at line 531, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181¢"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147¢"ECombine this catch with the one at line 544, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181¯"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147¯"ECombine this catch with the one at line 557, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181¼"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147¼"ECombine this catch with the one at line 570, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181ײ"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147ײ"ECombine this catch with the one at line 596, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181¡"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147¡"ECombine this catch with the one at line 671, which has the same body.(©¢ָהרÿÿÿÿ
+=
+java:S1181®"!Catch Exception instead of Error.(©¢ָהרÿÿÿÿ
+a
+java:S2147®"ECombine this catch with the one at line 684, which has the same body.(©¢ָהרÿÿÿÿ
+N
+java:S3398³"2Move this method into "WrappedDiagnosticListener".(ַמֱßתÿÿÿÿ
